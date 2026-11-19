@@ -1,0 +1,249 @@
+[
+  {
+    "id": "ettoday",
+    "category": "media",
+    "site": "ETtoday",
+    "url": "https://www.ettoday.net/news/20261119/3275171.htm",
+    "page_type": "article",
+    "anchors": [],
+    "evidence": {
+      "selector": ".story p",
+      "minimum": 30,
+      "kind": "paragraph"
+    }
+  },
+  {
+    "id": "pts",
+    "category": "media",
+    "site": "公視新聞",
+    "url": "https://news.pts.org.tw/article/759090",
+    "page_type": "article",
+    "anchors": [],
+    "evidence": {
+      "selector": "article.row p",
+      "minimum": 30,
+      "kind": "paragraph"
+    }
+  },
+  {
+    "id": "reporter",
+    "category": "media",
+    "site": "報導者",
+    "url": "https://www.twreporter.org/a/2026-taipei-golden-horse-film-festival-chairmanship-hands-over",
+    "page_type": "article",
+    "anchors": [],
+    "evidence": {
+      "selector": "#article-body [class*='ContentBlock-'] p",
+      "minimum": 30,
+      "kind": "paragraph"
+    }
+  },
+  {
+    "id": "inside",
+    "category": "media",
+    "site": "INSIDE",
+    "url": "https://www.inside.com.tw/article/42926-ankit-gupta-yc-interview-cs-degree-ai-era",
+    "page_type": "article",
+    "anchors": []
+  },
+  {
+    "id": "technews",
+    "category": "media",
+    "site": "科技新報",
+    "url": "https://technews.tw/2026/11/19/intel-18a-process-major-breakthrough-first-external-customer/",
+    "page_type": "article",
+    "anchors": [],
+    "evidence": {
+      "selector": ".entry-content .indent p",
+      "minimum": 40,
+      "kind": "paragraph"
+    }
+  },
+  {
+    "id": "pansci",
+    "category": "media",
+    "site": "泛科學",
+    "url": "https://pansci.asia/archives/382531",
+    "page_type": "article",
+    "anchors": [],
+    "evidence": {
+      "selector": "section[data-url='https://pansci.asia/archives/382531'] .post-content-container p",
+      "minimum": 40,
+      "kind": "paragraph"
+    }
+  },
+  {
+    "id": "tvbs",
+    "category": "media",
+    "site": "TVBS",
+    "url": "https://news.tvbs.com.tw/life/4053157",
+    "page_type": "article",
+    "anchors": [],
+    "evidence": {
+      "selector": "[data-section='article-content-editor'] > div:first-child p",
+      "minimum": 30,
+      "kind": "paragraph"
+    }
+  },
+  {
+    "id": "setn",
+    "category": "media",
+    "site": "三立新聞",
+    "url": "https://www.setn.com/news/1941795",
+    "page_type": "article",
+    "anchors": [],
+    "evidence": {
+      "selector": "#newsContent p",
+      "minimum": 30,
+      "kind": "paragraph"
+    }
+  },
+  {
+    "id": "cw",
+    "category": "media",
+    "site": "天下雜誌",
+    "url": "https://www.cw.com.tw/article/5143757",
+    "page_type": "article",
+    "anchors": [],
+    "evidence": {
+      "selector": "article .article__body p",
+      "minimum": 40,
+      "kind": "paragraph"
+    }
+  },
+  {
+    "id": "bbc",
+    "category": "media",
+    "site": "BBC 中文",
+    "url": "https://www.bbc.com/zhongwen/articles/c38x04eppnpdo/trad",
+    "page_type": "article",
+    "anchors": [],
+    "evidence": {
+      "selector": "main > div[dir] p",
+      "minimum": 40,
+      "kind": "paragraph"
+    }
+  },
+  {
+    "id": "guardian",
+    "category": "media",
+    "site": "The Guardian",
+    "url": "https://www.theguardian.com/science/2026/nov/19/ipcc-report-delay-climate-crisis-scientist",
+    "page_type": "article",
+    "anchors": [],
+    "evidence": {
+      "selector": "[data-gu-name='body'] p",
+      "minimum": 80,
+      "kind": "paragraph"
+    }
+  },
+  {
+    "id": "tnl",
+    "category": "media",
+    "site": "關鍵評論網",
+    "url": "https://www.thenewslens.com/article/271214",
+    "page_type": "article",
+    "anchors": []
+  },
+  {
+    "id": "apple",
+    "category": "brand",
+    "site": "Apple",
+    "url": "https://www.apple.com/tw/newsroom/2025/09/apple-introduces-iphone-17/",
+    "page_type": "article",
+    "anchors": [],
+    "evidence": {
+      "selector": ".pagebody-copy",
+      "minimum": 40,
+      "kind": "paragraph"
+    }
+  },
+  {
+    "id": "nike",
+    "category": "brand",
+    "site": "Nike",
+    "url": "https://about.nike.com/en/newsroom/releases/what-is-nike-tuned-air",
+    "page_type": "article",
+    "anchors": [],
+    "evidence": {
+      "selector": "#main p",
+      "minimum": 70,
+      "kind": "paragraph"
+    }
+  },
+  {
+    "id": "dyson",
+    "category": "brand",
+    "site": "Dyson",
+    "url": "https://www.dyson.tw/haircare/hairscience7.aspx",
+    "page_type": "article",
+    "anchors": [],
+    "evidence": {
+      "selector": "main [data-component-name*='_static_panel']",
+      "minimum": 30,
+      "kind": "leaf_text"
+    }
+  },
+  {
+    "id": "lrp",
+    "category": "brand",
+    "site": "理膚寶水",
+    "url": "https://www.lrp.com.tw/events/sensi2019/index.html",
+    "page_type": "article",
+    "anchors": [],
+    "evidence": {
+      "selector": ".fla-body .fla-main, .fla-body .sec-teach",
+      "exclude": ".click-hint, .sec-btn, .btn-white, .search-block, .sec-3-acc .more",
+      "minimum": 8,
+      "kind": "leaf_text"
+    }
+  },
+  {
+    "id": "fb_nasa",
+    "category": "social",
+    "site": "Facebook NASA",
+    "url": "https://www.facebook.com/NASA/",
+    "page_type": "public_profile",
+    "anchors": []
+  },
+  {
+    "id": "fb_nike",
+    "category": "social",
+    "site": "Facebook Nike",
+    "url": "https://www.facebook.com/nike/",
+    "page_type": "public_profile",
+    "anchors": []
+  },
+  {
+    "id": "ig_nasa",
+    "category": "social",
+    "site": "Instagram NASA",
+    "url": "https://www.instagram.com/nasa/",
+    "page_type": "public_profile",
+    "anchors": []
+  },
+  {
+    "id": "ig_nike",
+    "category": "social",
+    "site": "Instagram Nike",
+    "url": "https://www.instagram.com/nike/",
+    "page_type": "public_profile",
+    "anchors": []
+  },
+  {
+    "id": "ig_post",
+    "category": "social",
+    "site": "Instagram 公開貼文（報導者內嵌來源）",
+    "url": "https://www.instagram.com/p/DfhSfHbmR23/",
+    "page_type": "public_post",
+    "anchors": []
+  },
+  {
+    "id": "reuters_control",
+    "category": "control",
+    "site": "Reuters 分類頁存取控制",
+    "url": "https://www.reuters.com/technology/",
+    "page_type": "category",
+    "anchors": []
+  }
+]

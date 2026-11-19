@@ -1,0 +1,4 @@
+# 請將以下示範網址換成真正要分析的文章網址。
+# 每行一個網址；空行與 # 開頭的註解會略過。
+https://example.com/article-a
+https://example.com/article-b

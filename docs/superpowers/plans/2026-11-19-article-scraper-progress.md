@@ -1,0 +1,24 @@
+# SDD ledger — plan: docs/superpowers/plans/2026-11-19-article-scraper.md
+
+- User approved the standalone article extraction design.
+- Environment: empty unborn git repository; no pre-existing tests or application files. Created branch codex/article-scraper after default sandbox denied writing .git/HEAD.lock.
+- Execution adaptation: implement in the supplied new workspace, use PowerShell-native commands and this persistent ledger; git-dependent bash task helpers cannot operate against an unborn HEAD. No separate worktree is needed for this empty new project.
+- Pre-flight: extractor produces Article; fetching produces FetchedPage; pipeline joins both into ScrapeResult; export and CLI consume the same records. Interfaces are consistent.
+- Ruling: retain actual extraction strategy rather than entire MCP module — remove unrelated services and never promote OG snippets to article body; preserves user intent and reduces installation requirements.
+- Task 1: complete — extractor tests RED missing implementation, then GREEN 7/7. Explicit author meta is retained because Trafilatura may drop short Chinese author names. Fixed a hand-counted fixture expectation from 11 to 10 characters.
+- Task 2: complete — inputs/HTTP tests RED missing modules, then combined extraction/input/HTTP suite GREEN 28/28. Sandbox localhost and pytest temp restrictions required escalated test execution; no product workaround was introduced.
+- Task 3: CLI/export suite GREEN 12/12, browser integration pending (5 tests skipped until Chromium is installed). Browser uses Chromium CDP request interception to check robots before redirected main documents, with fresh contexts per URL.
+- Task 3: complete — real Chromium integrations GREEN 6/6 (includes dependency check); optional browser installed and verified. Shared full-suite verification follows the review fixes.
+- Final review: fresh read-only reviewer identified three Important issues, no Critical or Minor findings: body-size enforcement after rendering, ordinary long login pages missed by quality heuristics, and date inference from URL.
+- Final: fixed document size limit — no-length and gzip oversized body with JS removing the DOM both RED (did not raise) then GREEN; main document is now read as a bounded decoded CDP stream before rendering.
+- Final: fixed missing login warning — realistic 248-character password/login form RED (warnings empty), then GREEN after title/phrase/structural checks.
+- Final: fixed inferred publication date — dated URL without page evidence RED (2025-01-12), then GREEN (null); only explicit ISO publication metadata/datePublished/time evidence is used.
+- Review fix pass: extraction/browser suite GREEN 17/17. No re-review required; full suite and real-browser public smoke are next.
+- Ruling: access-wall detection remains heuristic as approved — all possible sites cannot be exhaustively classified; warnings request source checking rather than certifying completeness.
+- Ruling: main document transfer and rendered HTML are bounded; images/scripts/media traffic is outside the document limit — a webpage-wide traffic quota would be a separate feature.
+- Final full suite: `.venv/Scripts/python -m pytest --run-browser -q --tb=short --basetemp=.cache/test-final` → 49 passed in 25.35s, no skips or warnings.
+- Final static checks: `ruff check .` passed; `ruff format --check .` → 21 files already formatted. Windows `scrape.cmd --help` executed successfully.
+- Public HTTP smoke: MDN Traditional Chinese HTML article → 1,947 non-whitespace characters, actual body verified. A Python blog legacy URL returned an HTML redirect stub (88 characters); correctly retained short-content and try-browser warnings rather than certifying it as full text.
+- Public browser smoke: MDN Chinese HTML and English HTTP Overview → 1,947 and 11,081 characters, no warnings; final redirect URL retained, both TXT and Markdown artifacts inspected alongside JSON.
+- Task 4: complete — Traditional Chinese README, Windows launcher, sample URL file, source provenance, optional browser installation and lockfile delivered. No critical or important review findings remain. No deferred minors.
+- Work remains in the supplied project directory on local branch codex/article-scraper; files are not committed, pushed or published. No merge/base-branch decision is needed for this new unborn repository.
